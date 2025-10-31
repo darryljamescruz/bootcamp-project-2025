@@ -1,4 +1,4 @@
-interface Blog {
+export interface Blog {
     title: string,
     date: string,
     description: string,
@@ -7,7 +7,7 @@ interface Blog {
     slug: string
 }
 
-const blog: Blog[] = [
+const blogs: Blog[] = [
     {
         title: "Thoughts on Julian's Cafe",
         date: "2025-10-14",
@@ -71,6 +71,4 @@ function renderBlogs(blogs: Blog[]): void {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderBlogs(blog);
-});
+export default blogs;
