@@ -1,10 +1,11 @@
 export interface Blog {
-    title: string,
-    date: string,
-    description: string,
-    image: string,
-    imageAlt: string,
-    slug: string
+    title: string;
+    date: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    slug: string;
+    content: string;
 }
 
 const blogs: Blog[] = [
@@ -12,63 +13,20 @@ const blogs: Blog[] = [
         title: "Thoughts on Julian's Cafe",
         date: "2025-10-14",
         description: "It's lowkey kinda mid",
-        image: "../public/julians.jpg",
+        image: "/julians.jpg",
         imageAlt: "Julian's Cafe",
-        slug: "julians-cafe.html"
+        slug: "julians-cafe",
+        content: "It's lowkey kinda mid. But here's a longer blurb to simulate content. I've been trying a few of their drinks, but for some reason the coffee has not been hitting like it should. Perhaps its just me, but I'd like the coffee to taste better."
     },
     {
         title: "Tornadoes in SLO",
         date: "2025-10-14",
         description: "Tornadoes in SLO",
-        image: "../public/tornado.jpg",
+        image: "/tornado.jpg",
         imageAlt: "Tornadoes in SLO",
-        slug: "tornadoes-in-slo.html"
-    }
-]
-
-function renderBlogs(blogs: Blog[]): void {
-    const blogContainer = document.getElementById('blog-container');
-    if (!blogContainer) return;
-
-    blogContainer.innerHTML = '';
-    blogContainer.classList.add('blog-grid');
-
-    blogs.forEach((post) => {
-        const card = document.createElement('article');
-        card.className = 'blog-card';
-
-        const title = document.createElement('h2');
-        title.textContent = post.title;
-
-        const meta = document.createElement('div');
-        meta.className = 'blog-meta';
-        meta.textContent = new Date(post.date).toDateString();
-
-        const img = document.createElement('img');
-        img.src = post.image;
-        img.alt = post.imageAlt;
-        img.loading = 'lazy';
-        img.referrerPolicy = 'no-referrer';
-        img.onerror = () => {
-            img.style.display = 'none';
-        };
-
-        const desc = document.createElement('p');
-        desc.textContent = post.description;
-
-        const link = document.createElement('a');
-        link.href = post.slug;
-        link.className = 'blog-link';
-        link.textContent = 'Read more →';
-
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(meta);
-        card.appendChild(desc);
-        card.appendChild(link);
-
-        blogContainer.appendChild(card);
-    });
-}
+        slug: "tornadoes-in-slo",
+        content: "Wild weather! A longer paragraph to simulate real content. Can't believe how I woke up to a tornado warning at 12 am. The weather has been so weird lately, and a tornado warning happening in the central coast was not on my 2025 bingo card. Life moves on!"
+    },
+];
 
 export default blogs;
