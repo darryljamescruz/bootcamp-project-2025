@@ -9,10 +9,10 @@ export default function Portfolio() {
                 
                 <div className="space-y-6">
                     <Image 
-                        src="/portfolio.png" 
+                        src="/website-1.png" 
                         alt="Hack4Impact Starter Pack Website 1.0" 
-                        width={640} 
-                        height={480}
+                        width={1080} 
+                        height={1920}
                         className="w-full h-auto rounded-lg"
                     />
                     <div className="space-y-3">
@@ -20,7 +20,7 @@ export default function Portfolio() {
                             Hack4Impact Starter Pack Website 1.0
                         </h2>
                         <p className="text-slate-300 text-lg leading-relaxed">
-                            This is a website that I built using the Hack4Impact Starter Pack. {" "}
+                            This is a website that I built using the Hack4Impact Starter Pack. This was using plain HTML & CSS. {" "}
                             <Link 
                                 href="https://darryljamescruz.github.io/index.html" 
                                 className="text-red-400 hover:text-red-300 underline underline-offset-4 transition-colors duration-200"
